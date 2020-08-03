@@ -73,9 +73,9 @@ class MensajeriaController extends Controller
             $count++;
         }
 
-        $spanInt = $spanInt  /$count;
+        $spanInt_ = $spanInt  /$count;
         $esSpam=0;
-        if ($spanInt >2.5) {
+        if ($spanInt_ >2.5) {
             $esSpam=1;
         }
          
@@ -85,7 +85,7 @@ class MensajeriaController extends Controller
                  "fromEmail"=>$inputs["fromEmail"],
                  "subjectId"=>$inputs["subjectId"],
                  "body"=>$inputs["body"],
-                 "spamScore"=>$esSpam ,
+                 "spamScore"=>$spanInt ,
              ]
          );
 
